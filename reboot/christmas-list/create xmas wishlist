@@ -1,0 +1,49 @@
+create xmas wishlist
+be able to do 4 thing
+1. display wishlist
+2. add gift to list
+3. mark a gift (as bought)
+4. delete a gift
+
+create empty array for gifts
+ask user for what he wants to do
+store users input
+different actions
+
+1. display wishlist
+
+2. add gift to the list
+ask user for gift
+store it into list
+
+3. mark a gift
+[x] parfume
+
+4. delete items
+
+
+christmas list = []
+puts "welcome to the xmas list"
+action = nil
+
+until action == "exit"
+puts "Choose one of the following options: Display|Add|Check|Delete|Exit"
+action = gets.chomp.downcase
+
+case action
+when "display"
+christmas_list.each_with_index do |gift, index|
+puts "#{ondex + 1} - #{gift}"
+end
+when "add"
+puts "What do you wanna add?"
+gift = gets.chomp
+christmas_list << gift
+when "check"
+# [x] []
+when "delete"
+puts "what gift do you wanna delete?"
+deleted_gift = gets.chomp
+christmas_list.delete(deleted_gift)
+end
+end
